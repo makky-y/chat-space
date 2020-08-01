@@ -1,5 +1,4 @@
-* {
-}
+$btncolor: #38aef0;
 
 .wrapper {
   display: flex;
@@ -9,13 +8,20 @@
 .side_bar {
   background-color: #253141;
   width: 300px;
-}
 
-.side_bar_header {
-  height: 100px;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+    &_header {
+    height: 100px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    &_group {
+      height: calc(100vh - 120px);
+      background-color: #2f3e51;
+      padding: 20px 20px 0;
+      overflow: scroll;
+    }
 }
 
 .user {
@@ -48,23 +54,21 @@
   text-decoration: none;
 }
 
-.side_bar_group {
-  height: calc(100vh - 120px);
-  background-color: #2f3e51;
-  padding: 20px 20px 0;
-  overflow: scroll;
-}
-
 .main_chat {
   background-color: #ffffff;
   width: calc(100vw - 300px);
-}
 
-.main_chat_header {
-  background-color: #ffffff;
-  height: 100px;
-  border-bottom: 1px #eeeeee solid;
-  display: flex;
+  &_header {
+    background-color: #ffffff;
+    height: 100px;
+    border-bottom: 1px #eeeeee solid;
+    display: flex;
+  }
+
+  &_message {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+  }
 }
 
 .member_name_main {
@@ -78,29 +82,24 @@
   color: #999999;
   font-size: 12px;
   padding-top: 15px;
-
-
 }
 
 .edit_button {
-  color: #38aef0;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  width: 72px;
+  color: $btncolor;
   font-size: 16px;
-  padding-top: 35px;
-  margin: 0 0 0 auto;
-  padding-right: 40px;
-}
-
-.main_chat_message {
-  background-color: #fafafa;
-  height: calc(100vh - 190px);
-
+  margin: 28px 60px 0 auto;
+  border: solid 1px $btncolor;
+  text-decoration: none;
 }
 
 .chat_messsage1 {
   padding: 35px 0 0 40px;
   display: flex;
 }
-
 
 .chat_massage1_masa {
   margin-right: 5px;
@@ -137,57 +136,50 @@
   font-size: 11px;
 }
 
-
 .main_chat_message_form {
   background-color: #d2d2d2;
   height: 90px;
+  &__block {
+    height: 50px;
+    padding: 20px 0 10px 40px;
+    display: flex;
+    margin-right: 40px;
+  }
+  &_send__btn {
+    margin-left: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: $btncolor;
+    border-right: 10px;
+    cursor: pointer;
+    &__send {
+      color: white;
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+  
+    &__type {
+      height: 50px;
+      background-color: #ffffff;
+      width: 100%;
+      position: relative;
+      margin-right: 15px;
 
+      &_a_message {
+        height: 50px;
+        width: 100%;
+        padding-left: 10px;
+      }
+    }
+      &_file__form{
+        top: 10px;
+        right: 10px;
+        position: absolute;
+        font-size: 1.3rem;
+
+        .input-box__image_form {
+          display: none;
+        } 
+      }
 }
-
-
-.main_chat_message_form_block {
-  height: 50px;
-  padding: 20px 0 10px 40px;
-  display: flex;
-  margin-right: 40px;
-}
-
-.main_chat_message_form_type {
-  height: 50px;
-  background-color: #ffffff;
-  width: 100%;
-  position: relative;
-  margin-right: 15px;
-}
-
-.main_chat_message_form_type_a_message {
-  height: 50px;
-  width: 100%;
-  padding-left: 10px;
-}
-
-.main_chat_message_form_file_form{
-  top: 10px;
-  right: 10px;
-  position: absolute;
-  font-size: 1.3rem;
-}
-
-.main_chat_message_form_send_btn {
-  margin-left: 10px;
-  width: 100px;
-  height: 50px;
-  background-color: #38aef0;
-  border-right: 10px;
-  cursor: pointer;
-}
-
-.main_chat_message_form_send_btn_send {
-  color: white;
-  text-align: center;
-  margin-top: 12px;
-}
-
-.input-box__image_form {
-  display: none;
-} 

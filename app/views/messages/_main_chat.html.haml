@@ -3,9 +3,10 @@
     .member_name_main
       test
       .member_name_sub
-        Member:masa
+        Member : masa
 
-    %a{ href: '###' , class: 'edit_button'} Edit
+    = link_to 'Edit' , '#', class:'edit_button'
+    
 
   .main_chat_message
     .chat_messsage1
@@ -25,16 +26,16 @@
       今日は夜から雨
 
   .main_chat_message_form
-    .main_chat_message_form_block
-      .main_chat_message_form_type
+    .main_chat_message_form__block
+      .main_chat_message_form__type
         %p
-          %input{:class => "main_chat_message_form_type_a_message", :type => "text", :placeholder => "type a message"}/
+          %input{class: "main_chat_message_form__type_a_message", type: "text", placeholder: "type a message"}/
 
-        .main_chat_message_form_file_form
+        .main_chat_message_form_file__form
           %label{class: "input-box__image"}
             = icon('fas', 'image')
             %input{type: "file", class: "input-box__image_form"}
             %end
-      .main_chat_message_form_send_btn
-        .main_chat_message_form_send_btn_send
+      .main_chat_message_form_send__btn
+        .main_chat_message_form_send__btn__send
           Send 
