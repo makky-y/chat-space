@@ -8,6 +8,7 @@ $btncolor: #38aef0;
 .side_bar {
   background-color: #253141;
   width: 300px;
+  text-decoration: none;
 
     &_header {
     height: 100px;
@@ -123,17 +124,18 @@ $btncolor: #38aef0;
   color: #999999;
 }
 
-.tech {
-  height: 40px;
+.group__name {
   color: #ffffff;
   font-size: 15px;
   padding-bottom: 5px;
+  
 }
 
-.message {
-  height: 11px;
+.group__message {
+  margin-bottom: 40px;
   color: #ffffff;
   font-size: 11px;
+  text-decoration: none;
 }
 
 .main_chat_message_form {

@@ -4,12 +4,16 @@
     .user
       .name masa
       %p.edit
-        = link_to '##' do
+        = link_to 'groups/new' do
           = icon('far', 'edit')
-        = link_to '##' do
+        = link_to 'edit_user_path' do
           = icon('fas', 'cog')
 
   .side_bar_group
-    .tech techcamp
-
-    .message まだメッセージがありません 
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません。
