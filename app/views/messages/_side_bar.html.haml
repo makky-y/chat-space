@@ -1,19 +1,19 @@
 .side_bar
-
   .side_bar_header
     .user
-      .name masa
+      .name 
+        = current_user.name
       %p.edit
-        = link_to 'groups/new' do
+        = link_to new_group_path do
           = icon('far', 'edit')
-        = link_to 'edit_user_path' do
+        = link_to edit_user_path(current_user) do
           = icon('fas', 'cog')
 
   .side_bar_group
     - current_user.groups.each do |group|
       .group
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .group__name
             = group.name
           .group__message
-            メッセージはまだありません。
+            = group.show_last_message
