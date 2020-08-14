@@ -39,17 +39,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-  gem 'font-awesome-sass'
-  gem "haml-rails", ">= 1.0", '<= 2.0.1'
-
   gem 'pry-rails'
-  gem 'carrierwave'
-  gem 'mini_magick'
   gem 'rspec-rails', '~> 3.5'
   gem 'rails-controller-testing'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'jquery-rails'
 end
 
 group :development do
@@ -68,3 +62,8 @@ group :production do
 end
 
   gem 'devise'
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'font-awesome-sass'
+  gem "haml-rails", ">= 1.0", '<= 2.0.1'
+  
